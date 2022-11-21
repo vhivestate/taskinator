@@ -379,7 +379,9 @@ return actionContainerEl;
     }
   };
 
+  console.dir(window.document);
 
+  
 // Create a new task
 formEl.addEventListener("submit", taskFormHandler);
 
