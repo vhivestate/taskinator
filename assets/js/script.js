@@ -6,6 +6,24 @@ var tasksInProgressEl = document.querySelector("#tasks-in-progress");
 var tasksCompletedEl = document.querySelector("#tasks-completed");
 var buttonEl = document.querySelector("#save-task");
 console.log(buttonEl);
+var taskItemEl = document.createElement("li");
+var buttonEl = document.querySelector("#save-task"); 
+var tasksToDoEl = document.querySelector("#tasks-to-do"); 
+
+var createTaskHandler = function() { 
+  var listItemEl = document.createElement("li"); 
+  listItemEl.className = "task-item"; 
+  listItemEl.textContent = "This is a new task."; 
+  tasksToDoEl.appendChild(listItemEl); 
+  }; 
+
+buttonEl.addEventListener("click", createTaskHandler);
+buttonEl.addEventListener("click", function() {
+  var listItemEl = document.createElement("li");
+  listItemEl.className = "task-item";
+  listItemEl.textContent = "This is a new task.";
+  tasksToDoEl.appendChild(listItemEl);
+});
 
 // create array to hold tasks for saving
 var tasks = [];
@@ -381,7 +399,7 @@ return actionContainerEl;
 
   console.dir(window.document);
 
-  
+
 // Create a new task
 formEl.addEventListener("submit", taskFormHandler);
 
