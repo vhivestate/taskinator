@@ -4,7 +4,9 @@ var taskIdCounter = 0;
 var pageContentEl = document.querySelector("#page-content");
 var tasksInProgressEl = document.querySelector("#tasks-in-progress");
 var tasksCompletedEl = document.querySelector("#tasks-completed");
-  
+var buttonEl = document.querySelector("#save-task");
+console.log(buttonEl);
+
 // create array to hold tasks for saving
 var tasks = [];
 
@@ -376,6 +378,7 @@ return actionContainerEl;
       createTaskEl(savedTasks[i]);
     }
   };
+
 
 // Create a new task
 formEl.addEventListener("submit", taskFormHandler);
